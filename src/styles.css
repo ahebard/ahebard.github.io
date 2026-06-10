@@ -740,7 +740,7 @@ body.developer-mode .skill-tag:hover {
 
 /* ---------- Custom Cursor ---------- */
 
-/* .custom-cursor {
+.custom-cursor {
   position: fixed;
   width: 20px;
   height: 20px;
@@ -769,7 +769,7 @@ body.developer-mode .skill-tag:hover {
     opacity: 0;
     transform: translateY(20px) scale(0);
   }
-} */
+}
 
 /* ---------- Developer Toggle ---------- */
 
@@ -840,7 +840,7 @@ body.developer-mode .skill-tag:hover {
   .timeline-item.left .job-header > div { text-align: left; }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   html, body { cursor: auto; }
   .custom-cursor, .sparkle { display: none; }
-} */
+}
