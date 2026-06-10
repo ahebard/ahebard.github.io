@@ -38,7 +38,7 @@ module.exports = {
   ],
   devServer: {
     static: path.resolve(__dirname, "dist"),
-    port: 3009,
+    port: 3000,
     host: "0.0.0.0",
     allowedHosts: "all",
     historyApiFallback: true,
