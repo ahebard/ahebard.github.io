@@ -47,6 +47,7 @@ export interface BeyondWorkEntry {
   description: string;
   marathons?: Marathon[];
   cats?: Cat[];
+  image?: string;
 }
 
 export interface EducationEntry {

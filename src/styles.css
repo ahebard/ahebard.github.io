@@ -416,7 +416,7 @@ body.developer-mode .timeline-logo-node {
 
 .job-info {
   text-align: right;
-  padding-right: 1.5rem;
+  padding-right: 2.2rem;
 }
 
 .job-positions {
@@ -704,6 +704,39 @@ body.developer-mode .skill-tag:hover {
   filter: none;
 }
 
+.marathons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 1rem;
+  width: 100%;
+}
+
+.marathon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.marathon-label {
+  font-size: 0.65rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+body.developer-mode .marathon-label {
+  background: none;
+  border-color: var(--text);
+  color: var(--text);
+}
+
 .checkmark {
   position: absolute;
   bottom: -2px;
@@ -722,19 +755,56 @@ body.developer-mode .skill-tag:hover {
 
 .cat-avatar {
   text-align: center;
-  width: 80px;
+  width: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.cat-avatar .hobby-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+body.developer-mode .cat-avatar .hobby-icon {
+  border: 1px solid var(--text);
+}
+
 .cat-name {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   margin-top: 0.4rem;
-  color: var(--muted);
+  color: var(--text);
+  font-weight: 600;
   width: 100%;
   text-align: center;
   word-wrap: break-word;
+}
+
+.hobby-image-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+body.developer-mode .hobby-image-wrapper {
+  border-color: var(--text);
+}
+
+.hobby-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.hobby-image:hover {
+  transform: scale(1.05);
 }
 
 /* ---------- Beyond Work ---------- */

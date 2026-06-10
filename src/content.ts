@@ -252,13 +252,14 @@ export const beyondWork: BeyondWorkEntry[] = [
     title: "My Cats 🐈",
     description: "Meet my two companions, Smudgy and Sparky.",
     cats: [
-      { name: "Smudgy", icon: "icons/pixel-cat.svg" },
-      { name: "Sparky", icon: "icons/pixel-cat.svg" },
+      { name: "Smudgy", icon: "icons/smudgy.jpg" },
+      { name: "Sparky", icon: "icons/sparky.jpg" },
     ],
   },
   {
     title: "Beach 🏖️",
-    description: "Enjoying the sun and the palm trees.",
+    description: "Enjoying the Santa Monica sun.",
+    image: "icons/beach.jpg",
   },
 ];
 

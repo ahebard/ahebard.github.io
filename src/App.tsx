@@ -310,17 +310,22 @@ function BeyondWork() {
             <h3 className="beyond-title">{item.title}</h3>
             <p className="beyond-description">{item.description}</p>
             {item.marathons && (
-              <div className="hobby-extras">
-                {item.marathons.map((m, j) => (
-                  <div key={j} className="hobby-icon-wrapper" title={m.name}>
-                    <img
-                      src={m.icon}
-                      alt={m.name}
-                      className={`hobby-icon ${m.completed ? "completed" : "not-completed"}`}
-                    />
-                    {m.completed && <span className="checkmark">✓</span>}
-                  </div>
-                ))}
+              <div className="hobby-extras marathons-container">
+                <div className="marathons-grid">
+                  {item.marathons.map((m, j) => (
+                    <div key={j} className="marathon-item">
+                      <div className="hobby-icon-wrapper" title={m.name}>
+                        <img
+                          src={m.icon}
+                          alt={m.name}
+                          className={`hobby-icon ${m.completed ? "completed" : "not-completed"}`}
+                        />
+                        {m.completed && <span className="checkmark">✓</span>}
+                      </div>
+                      <span className="marathon-label">{m.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
             {item.cats && (
@@ -331,6 +336,11 @@ function BeyondWork() {
                     <p className="cat-name">{c.name}</p>
                   </div>
                 ))}
+              </div>
+            )}
+            {item.image && (
+              <div className="hobby-image-wrapper">
+                <img src={item.image} alt={item.title} className="hobby-image" />
               </div>
             )}
           </div>
