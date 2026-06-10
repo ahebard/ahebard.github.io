@@ -48,39 +48,68 @@ export const about: string[] = [
 //   worked with at that job. Add/remove freely.
 export const career: CareerEntry[] = [
   {
-    company: "Example Company",
+    company: "Mangomint",
     logo: "icons/mangomint_logo.jpg",
-    tools: ["Python", "Django", "React", "PostgreSQL", "Docker"],
+    tools: [
+      "React",
+      "TypeScript",
+      "Kotlin",
+      "Swift",
+      "PostgreSQL",
+      "AWS",
+      "Twilio",
+      "Stripe",
+      "Datadog",
+    ],
     positions: [
       {
-        period: "March 2022 - Present",
-        role: "Senior Software Engineer",
+        period: "June 2025 - Present",
+        role: "Senior Software Developer",
         points: [
-          "Led development of a key feature that improved performance and usability.",
-          "Mentored other engineers and helped shape technical direction.",
+          "Building customer-facing communication and business-management software for the beauty and wellness industry.",
+          "Key Project: Helped launch Mangomint Connect, a communications platform used by more than 2,000 businesses. Contributed features across web, iOS, Android, and backend systems, including VoIP calling, phone-number porting workflows, onboarding improvements, and international calling billing integrations as adoption grew from roughly 9,000 to more than 100,000 monthly calls.",
         ],
       },
     ],
   },
   {
-    company: "Another Company",
+    company: "The Walt Disney Company",
     logo: "icons/dtva2.jpg",
-    tools: ["Python", "JavaScript", "React", "AWS"],
+    tools: [
+      "Python",
+      "Django",
+      "React",
+      "TypeScript",
+      "MySQL",
+      "AWS S3",
+      "Docker",
+      "GraphQL",
+      "Nginx",
+    ],
     positions: [
       {
-        period: "February 2021 - February 2022",
-        role: "Mid-level Software Engineer",
+        period: "March 2024 - June 2025",
+        role: "Senior Software Developer",
         points: [
-          "Promoted to mid-level after consistently delivering high-quality features.",
-          "Built and maintained core web services used across the product.",
+          "Built internal software supporting animation studio production workflows.",
+          "Key Project: Designed and built the initial React and Django platform used to apply and manage visual and forensic watermarks on large video assets. Developed media-upload workflows backed by AWS S3 and built administrative tooling for user and permission management.",
+        ],
+      },
+
+      {
+        period: "November 2021 - March 2024",
+        role: "Software Developer",
+        points: [
+          "Developed internal web applications, APIs, and shared platform services.",
+          "Key Project: Led a major redesign of a studio-tracking application used by production teams. Reworked frontend and backend architecture, improving page-load performance by more than 200% while adding advanced filtering, search, and reporting capabilities.",
         ],
       },
       {
-        period: "June 2019 - January 2021",
-        role: "Software Engineer",
+        period: "September 2019 - November 2021",
+        role: "Associate Software Developer",
         points: [
-          "Collaborated with cross-functional teams to deliver projects on time.",
-          "Implemented responsive UI components using React and CSS.",
+          "Contributed to internal applications and engineering tooling across multiple teams.",
+          "Key Project: Created and maintained a reusable Django project template containing Docker, Nginx, deployment, and CI/CD infrastructure. The framework became the starting point for new applications and helped standardize development practices across the team.",
         ],
       },
     ],
@@ -88,21 +117,39 @@ export const career: CareerEntry[] = [
   {
     company: "First Job Inc.",
     logo: "icons/radial_v3.png",
-    tools: ["JavaScript", "HTML", "CSS", "Git"],
+    tools: [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "React",
+      "AWS",
+      "Scikit-learn",
+      "Lambda",
+      "CloudWatch",
+    ],
     positions: [
       {
-        period: "January 2018 - May 2019",
+        period: "September 2018 - September 2019",
         role: "Software Developer",
         points: [
-          "Learned the fundamentals of shipping software in a fast-paced environment.",
-          "Contributed code to multiple client projects.",
+          "Built software for a HIPAA-compliant healthcare analytics platform used by hospitals and care-management teams.",
+          "Key Project: Built Django models and ETL pipelines that transformed Medicare claims data into clinically meaningful patient events. The resulting datasets powered analytics and operational workflows focused on discharge planning and post-acute care management.",
         ],
       },
       {
-        period: "January 2017 - December 2017",
+        period: "September 2017 - September 2018",
         role: "Junior Developer",
         points: [
-          "Fixed bugs and improved existing features across several web applications.",
+          "Worked on predictive analytics, reporting systems, and backend APIs for healthcare customers.",
+          "Key Project: Contributed to machine-learning models designed to identify patients who could safely transition to lower-acuity care settings. Built supporting Django APIs and reporting tools used by healthcare organizations to evaluate patient eligibility.",
+        ],
+      },
+      {
+        period: "June 2017 - September 2017",
+        role: "Software Development Intern",
+        points: [
+          "Learned healthcare analytics and backend software development in a production environment.",
+          "Key Project: Developed data-processing logic used to generate patient journey analyses, utilization reports, and ROI projections for prospective healthcare customers.",
         ],
       },
     ],
@@ -115,23 +162,75 @@ export const education: EducationEntry[] = [
     degree: "B.S. Health Science, B.A. Economics",
     period: "2013 - 2017",
     logo: "icons/bu_logo2.png",
-    gpa: "3.7/4.0",
+    gpa: "3.9/4.0 (Summa Cum Laude)",
   },
 ];
 
 // Group your skills however you like.
 export const skills: SkillGroup[] = [
   {
-    category: "Languages",
-    items: ["Python", "TypeScript", "JavaScript", "SQL"],
+    category: "Backend",
+    items: [
+      "Python",
+      "Django",
+      "FastAPI",
+      "Flask",
+      "REST APIs",
+      "PostgreSQL",
+      "MySQL",
+    ],
   },
   {
-    category: "Frameworks",
-    items: ["Django", "React", "Node.js"],
+    category: "Frontend",
+    items: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "TanStack Query",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    category: "Mobile",
+    items: [
+      "Android (Kotlin)",
+      "iOS (Swift)",
+    ],
+  },
+  {
+    category: "Cloud & Infrastructure",
+    items: [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Redis",
+      "Nginx",
+      "Gunicorn",
+      "CI/CD",
+    ],
+  },
+  {
+    category: "Integrations",
+    items: [
+      "Twilio",
+      "Stripe",
+      "GraphQL",
+    ],
   },
   {
     category: "Tools",
-    items: ["Git", "Docker", "PostgreSQL", "Webpack"],
+    items: [
+      "GitHub",
+      "GitLab",
+      "Datadog",
+      "Bugsnag",
+      "Jira",
+      "Linear",
+      "Claude",
+      "Cursor",
+      "GitHub Copilot",
+    ],
   },
 ];
 
