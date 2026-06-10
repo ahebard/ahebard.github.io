@@ -4,7 +4,7 @@ gitignore# Dependencies
 .pnp.js
 
 # Production / Production builds
-# /dist
+/dist
 # /build
 # /out
 

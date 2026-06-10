@@ -1,8 +1,8 @@
 {
-  "name": "personal-website",
+  "name": "ashley-hebard-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal website / portfolio",
+  "description": "Ashley Hebard's portfolio",
   "homepage": "https://ahebard.github.io",
   "scripts": {
     "watch": "webpack --watch --mode development",
@@ -10,7 +10,7 @@
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development --open",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
