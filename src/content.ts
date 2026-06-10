@@ -23,8 +23,8 @@ export const profile: Profile = {
   // placeholder so the download button already works.
   resumeUrl: "resume.pdf",
   email: "ash.hebard@gmail.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  github: "https://github.com/ahebard/",
+  linkedin: "https://linkedin.com/in/ahebard/",
 };
 
 // Language icons shown under the intro (like the reference site).
