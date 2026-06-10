@@ -16,13 +16,13 @@ export interface LanguageIcon {
 export interface Position {
   period: string;
   role: string;
-  tools: string[];
   points: string[];
 }
 
 export interface CareerEntry {
   company: string;
   logo: string;
+  tools: string[];
   positions: Position[];
 }
 
@@ -47,4 +47,12 @@ export interface BeyondWorkEntry {
   description: string;
   marathons?: Marathon[];
   cats?: Cat[];
+}
+
+export interface EducationEntry {
+  school: string;
+  degree: string;
+  period: string;
+  logo: string;
+  gpa?: string;
 }

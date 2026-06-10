@@ -9,6 +9,7 @@ import {
   CareerEntry,
   SkillGroup,
   BeyondWorkEntry,
+  EducationEntry,
 } from "./types";
 
 export const profile: Profile = {
@@ -16,7 +17,7 @@ export const profile: Profile = {
   title: "Software Engineer",
   // One clean sentence for the hero/intro. Keep it short.
   tagline:
-    "Experienced Software engineer who loves building clean, reliable web apps with Python and React.",
+    "Experienced software engineer who loves building clean, reliable products with Python, Django, and React",
   // Path to your resume file. Drop your real file into the /public folder
   // (e.g. public/resume.pdf) and update this path. Currently wired to a
   // placeholder so the download button already works.
@@ -36,8 +37,7 @@ export const languageIcons: LanguageIcon[] = [
 ];
 
 export const about: string[] = [
-  "I'm a software developer who enjoys building clean, reliable web applications. I care about well-tested code, clear communication, and shipping things that genuinely help people.",
-  "Replace this text with a short paragraph or two about who you are, what you do, and what you're interested in.",
+  "I'm a software engineer with 8+ years of experience building full-stack applications with Python, Django, React, and AWS. I enjoy learning new technologies, tackling unfamiliar technical challenges, and building reliable systems that scale. My work has spanned healthcare analytics platforms, studio production tools, and customer-facing SaaS products.",
 ];
 
 // Each entry is one company in your career timeline.
@@ -49,12 +49,12 @@ export const about: string[] = [
 export const career: CareerEntry[] = [
   {
     company: "Example Company",
-    logo: "icons/placeholder-circle.svg",
+    logo: "icons/mangomint_logo.jpg",
+    tools: ["Python", "Django", "React", "PostgreSQL", "Docker"],
     positions: [
       {
         period: "March 2022 - Present",
         role: "Senior Software Engineer",
-        tools: ["Python", "Django", "React", "PostgreSQL", "Docker"],
         points: [
           "Led development of a key feature that improved performance and usability.",
           "Mentored other engineers and helped shape technical direction.",
@@ -64,12 +64,12 @@ export const career: CareerEntry[] = [
   },
   {
     company: "Another Company",
-    logo: "icons/placeholder-circle-2.svg",
+    logo: "icons/dtva2.jpg",
+    tools: ["Python", "JavaScript", "React", "AWS"],
     positions: [
       {
         period: "February 2021 - February 2022",
         role: "Mid-level Software Engineer",
-        tools: ["Python", "JavaScript", "React", "AWS"],
         points: [
           "Promoted to mid-level after consistently delivering high-quality features.",
           "Built and maintained core web services used across the product.",
@@ -78,7 +78,6 @@ export const career: CareerEntry[] = [
       {
         period: "June 2019 - January 2021",
         role: "Software Engineer",
-        tools: ["Python", "JavaScript", "React"],
         points: [
           "Collaborated with cross-functional teams to deliver projects on time.",
           "Implemented responsive UI components using React and CSS.",
@@ -88,12 +87,12 @@ export const career: CareerEntry[] = [
   },
   {
     company: "First Job Inc.",
-    logo: "icons/placeholder-circle-3.svg",
+    logo: "icons/radial_v3.png",
+    tools: ["JavaScript", "HTML", "CSS", "Git"],
     positions: [
       {
         period: "January 2018 - May 2019",
         role: "Software Developer",
-        tools: ["JavaScript", "HTML", "CSS", "Git"],
         points: [
           "Learned the fundamentals of shipping software in a fast-paced environment.",
           "Contributed code to multiple client projects.",
@@ -102,12 +101,21 @@ export const career: CareerEntry[] = [
       {
         period: "January 2017 - December 2017",
         role: "Junior Developer",
-        tools: ["JavaScript", "HTML", "CSS"],
         points: [
           "Fixed bugs and improved existing features across several web applications.",
         ],
       },
     ],
+  },
+];
+
+export const education: EducationEntry[] = [
+  {
+    school: "Boston University",
+    degree: "B.S. Health Science, B.A. Economics",
+    period: "2013 - 2017",
+    logo: "icons/bu_logo2.png",
+    gpa: "3.7/4.0",
   },
 ];
 
@@ -133,9 +141,9 @@ export const beyondWork: BeyondWorkEntry[] = [
     title: "Running 🏃‍♀️",
     description: "Training for the 6 World Marathon Majors.",
     marathons: [
-      { name: "Boston", icon: "icons/boston.svg", completed: true },
-      { name: "Chicago", icon: "icons/chicago.svg", completed: true },
-      { name: "London", icon: "icons/london.svg", completed: true },
+      { name: "Boston", icon: "icons/boston_marathon.jpeg", completed: true },
+      { name: "Chicago", icon: "icons/chicago_v3.jpeg", completed: true },
+      { name: "London", icon: "icons/london_marathon.png", completed: true },
       { name: "Berlin", icon: "icons/berlin.svg", completed: false },
       { name: "New York", icon: "icons/newyork.svg", completed: false },
       { name: "Tokyo", icon: "icons/tokyo.svg", completed: false },

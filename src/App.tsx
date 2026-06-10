@@ -4,6 +4,7 @@ import {
   languageIcons,
   about,
   career,
+  education,
   skills,
   beyondWork,
 } from "./content";
@@ -12,7 +13,8 @@ import {
   CareerEntry, 
   LanguageIcon, 
   SkillGroup,
-  Position
+  Position,
+  EducationEntry
 } from "./types";
 
 export default function App() {
@@ -37,6 +39,7 @@ export default function App() {
       <main>
         <About />
         <Career />
+        <Education />
         <Skills />
         <BeyondWork />
         <Contact />
@@ -116,6 +119,7 @@ function TopBar() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#career">Career</a>
+          <a href="#education">Education</a>
           <a href="#skills">Skills</a>
           <a href="#beyond">Beyond Work</a>
           <a href="#contact">Contact</a>
@@ -217,6 +221,13 @@ function Career() {
               <div className="job-company-header">
                 <h3 className="job-company">{entry.company}</h3>
               </div>
+              <ul className="job-tools">
+                {entry.tools.map((tool: string, k: number) => (
+                  <li key={k} className="job-tool">
+                    {tool}
+                  </li>
+                ))}
+              </ul>
               {entry.positions.map((pos: Position, j: number) => (
                 <div key={j} className="position-item">
                   <div className="job-header">
@@ -225,13 +236,6 @@ function Career() {
                       <span className="job-period">{pos.period}</span>
                     </div>
                   </div>
-                  <ul className="job-tools">
-                    {pos.tools.map((tool: string, k: number) => (
-                      <li key={k} className="job-tool">
-                        {tool}
-                      </li>
-                    ))}
-                  </ul>
                   <ul className="job-points">
                     {pos.points.map((point: string, k: number) => (
                       <li key={k}>{point}</li>
@@ -239,6 +243,32 @@ function Career() {
                   </ul>
                 </div>
               ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function Education() {
+  return (
+    <Section id="education" title="Education">
+      <div>
+        {education.map((edu: EducationEntry, i: number) => (
+          <div key={i} className="education-card">
+            <div className="education-logo">
+              <img src={edu.logo} alt={`${edu.school} logo`} />
+            </div>
+            <div className="education-info">
+              <h3 className="education-school">{edu.school}</h3>
+              <p className="education-degree">{edu.degree}</p>
+              <div className="education-meta">
+                <span className="education-period">
+                  {edu.period}
+                  {edu.gpa && ` | GPA: ${edu.gpa}`}
+                </span>
+              </div>
             </div>
           </div>
         ))}

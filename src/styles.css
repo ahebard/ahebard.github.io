@@ -71,7 +71,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  cursor: none;
+  /* cursor: none; */
 }
 
 body {
@@ -490,6 +490,64 @@ body.developer-mode .job-tool {
   margin-bottom: 0.35rem;
 }
 
+/* ---------- Education ---------- */
+
+.education-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+body.developer-mode .education-card {
+  border: 1px solid var(--text);
+  background: none;
+}
+
+.education-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--primary);
+}
+
+body.developer-mode .education-logo {
+  border: 1px solid var(--text);
+}
+
+.education-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-school {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.education-degree {
+  margin: 0.2rem 0;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.education-meta {
+  margin-top: 0.2rem;
+}
+
+.education-period {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* ---------- Skills ---------- */
 
 .skills-grid {
@@ -682,7 +740,7 @@ body.developer-mode .skill-tag:hover {
 
 /* ---------- Custom Cursor ---------- */
 
-.custom-cursor {
+/* .custom-cursor {
   position: fixed;
   width: 20px;
   height: 20px;
@@ -711,7 +769,7 @@ body.developer-mode .skill-tag:hover {
     opacity: 0;
     transform: translateY(20px) scale(0);
   }
-}
+} */
 
 /* ---------- Developer Toggle ---------- */
 
@@ -743,7 +801,7 @@ body.developer-mode .skill-tag:hover {
 /* ---------- Responsive ---------- */
 
 @media (min-width: 600px) {
-  .skills-grid, .beyond-grid {
+  .skills-grid, .beyond-grid, .education-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -782,7 +840,7 @@ body.developer-mode .skill-tag:hover {
   .timeline-item.left .job-header > div { text-align: left; }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   html, body { cursor: auto; }
   .custom-cursor, .sparkle { display: none; }
-}
+} */
