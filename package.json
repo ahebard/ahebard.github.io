@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "Personal website / portfolio",
+  "homepage": "https://ahebard.github.io",
   "scripts": {
     "watch": "webpack --watch --mode development",
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "dev": "webpack serve --mode development --open"
+    "dev": "webpack serve --mode development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^19.0.0",
