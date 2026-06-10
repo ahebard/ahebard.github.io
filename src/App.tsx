@@ -239,9 +239,17 @@ function Career() {
                       <span className="job-period">{pos.period}</span>
                     </div>
                     <ul className="job-points">
-                      {pos.points.map((point: string, k: number) => (
-                        <li key={k}>{point}</li>
-                      ))}
+                      {pos.points.map((point: string, k: number) => {
+                        if (point.startsWith("Key Project:")) {
+                          return (
+                            <li key={k}>
+                              <strong>Key Project:</strong>
+                              {point.substring("Key Project:".length)}
+                            </li>
+                          );
+                        }
+                        return <li key={k}>{point}</li>;
+                      })}
                     </ul>
                   </div>
                 ))}

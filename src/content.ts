@@ -1,8 +1,3 @@
-// ============================================================
-//  EDIT YOUR CONTENT HERE
-//  This is the only file you need to touch to update the site.
-// ============================================================
-
 import {
   Profile,
   LanguageIcon,
@@ -14,21 +9,15 @@ import {
 
 export const profile: Profile = {
   name: "Ashley Hebard",
-  title: "Software Engineer",
-  // One clean sentence for the hero/intro. Keep it short.
+  title: "Senior Software Engineer",
   tagline:
     "Experienced software engineer who loves building clean, reliable products with Python, Django, and React",
-  // Path to your resume file. Drop your real file into the /public folder
-  // (e.g. public/resume.pdf) and update this path. Currently wired to a
-  // placeholder so the download button already works.
   resumeUrl: "ashley_hebard_resume.pdf",
   email: "ash.hebard@gmail.com",
   github: "https://github.com/ahebard/",
   linkedin: "https://linkedin.com/in/ashley-hebard/",
 };
 
-// Language icons shown under the intro (like the reference site).
-// Each `icon` points to an SVG in /public/icons. Add/remove freely.
 export const languageIcons: LanguageIcon[] = [
   { name: "Python", icon: "icons/python.svg" },
   { name: "Django", icon: "icons/django.svg" },
@@ -40,12 +29,6 @@ export const about: string[] = [
   "I'm a software engineer with 8+ years of experience building full-stack applications with Python, Django, React, and AWS. I enjoy learning new technologies, tackling unfamiliar technical challenges, and building reliable systems that scale. My work has spanned healthcare analytics platforms, studio production tools, and customer-facing SaaS products.",
 ];
 
-// Each entry is one company in your career timeline.
-// - `logo` points to an SVG/PNG in /public/icons. Drop in a real company
-//   logo and update the path. Defaults to a placeholder.
-// - `positions` is an array of roles you held at that company.
-// - `tools` are little pills under the company name to highlight what you
-//   worked with at that job. Add/remove freely.
 export const career: CareerEntry[] = [
   {
     company: "Mangomint",
@@ -66,8 +49,8 @@ export const career: CareerEntry[] = [
         period: "June 2025 - Present",
         role: "Senior Software Developer",
         points: [
-          "Building customer-facing communication and business-management software for the beauty and wellness industry.",
-          "Key Project: Helped launch Mangomint Connect, a communications platform used by more than 2,000 businesses. Contributed features across web, iOS, Android, and backend systems, including VoIP calling, phone-number porting workflows, onboarding improvements, and international calling billing integrations as adoption grew from roughly 9,000 to more than 100,000 monthly calls.",
+          "Building customer-facing business-management and communications software used by thousands of salons, spas, and wellness businesses.",
+        "Key Project: Helped launch Mangomint Connect, a communications platform used by 2,000+ businesses. Contributed features across web, iOS, Android, and backend systems, including VoIP calling, phone-number porting, onboarding improvements, and international calling billing integrations."
         ],
       },
     ],
@@ -166,7 +149,6 @@ export const education: EducationEntry[] = [
   },
 ];
 
-// Group your skills however you like.
 export const skills: SkillGroup[] = [
   {
     category: "Backend",
@@ -175,9 +157,16 @@ export const skills: SkillGroup[] = [
       "Django",
       "FastAPI",
       "Flask",
+      "Kotlin",
       "REST APIs",
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
       "PostgreSQL",
       "MySQL",
+      "SQLite",
     ],
   },
   {
@@ -187,8 +176,6 @@ export const skills: SkillGroup[] = [
       "TypeScript",
       "Redux",
       "TanStack Query",
-      "HTML",
-      "CSS",
     ],
   },
   {
@@ -234,11 +221,10 @@ export const skills: SkillGroup[] = [
   },
 ];
 
-// "Beyond Work" — hobbies, interests, anything outside your career.
 export const beyondWork: BeyondWorkEntry[] = [
   {
     title: "Running 🏃‍♀️",
-    description: "Training for the 6 World Marathon Majors.",
+    description: "Chasing down the 6 World Marathon Majors, with a few others sprinkled in.",
     marathons: [
       { name: "Boston", icon: "icons/boston_marathon.jpeg", completed: true },
       { name: "Chicago", icon: "icons/chicago_v3.jpeg", completed: true },
@@ -250,7 +236,7 @@ export const beyondWork: BeyondWorkEntry[] = [
   },
   {
     title: "My Cats 🐈",
-    description: "Meet my two companions, Smudgy and Sparky.",
+    description: "Meet my two judgmental companions, Smudgy and Sparky.",
     cats: [
       { name: "Smudgy", icon: "icons/smudgy.jpg" },
       { name: "Sparky", icon: "icons/sparky.jpg" },
@@ -262,4 +248,3 @@ export const beyondWork: BeyondWorkEntry[] = [
     image: "icons/beach.jpg",
   },
 ];
-
