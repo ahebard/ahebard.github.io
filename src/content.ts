@@ -24,7 +24,7 @@ export const profile: Profile = {
   resumeUrl: "resume.pdf",
   email: "ash.hebard@gmail.com",
   github: "https://github.com/ahebard/",
-  linkedin: "https://linkedin.com/in/ahebard/",
+  linkedin: "https://linkedin.com/in/ashley-hebard/",
 };
 
 // Language icons shown under the intro (like the reference site).
