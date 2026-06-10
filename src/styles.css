@@ -18,7 +18,8 @@
   --font-brand: "Comic Sans MS", "Comic Sans", cursive;
   
   --radius: 10px;
-  --content-width: 760px;
+  --content-width: 1100px;
+  --prose-width: 720px;
   --topbar-height: 60px;
 
   /* Animation & Visibility Toggles */
@@ -323,8 +324,9 @@ main {
 
 .about-text {
   color: var(--text);
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
   text-align: center;
+  font-size: 1.05rem;
 }
 
 /* ---------- Career Timeline ---------- */
@@ -334,12 +336,14 @@ main {
   margin: 4rem 0;
 }
 
+/* Rail runs down the gap between the 0.5fr / 1.5fr columns.
+   Left column edge = (100% - 3rem gap) * 0.25; gap center = that + 1.5rem = 25% + 0.75rem. */
 .timeline::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: calc(25% + 0.75rem);
   width: 4px;
   margin-left: -2px;
   background: linear-gradient(var(--primary), var(--accent), var(--funky));
@@ -351,25 +355,21 @@ body.developer-mode .timeline::before {
 
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 0 3rem 4rem;
+  padding-bottom: 4rem;
 }
 
-.timeline-item.left {
-  left: 0;
-  text-align: right;
+.timeline-item:last-child {
+  padding-bottom: 0;
 }
 
-.timeline-item.right {
-  left: 50%;
-  text-align: left;
-}
-
+/* Logo sits on the rail (gap between columns) */
 .timeline-logo-node {
   position: absolute;
   top: 0;
-  width: 50px;
-  height: 50px;
+  left: calc(25% + 0.75rem);
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--surface);
   border: 4px solid var(--primary);
@@ -387,7 +387,7 @@ body.developer-mode .timeline-logo-node {
 }
 
 .timeline-logo-node:hover {
-  transform: scale(1.3) rotate(360deg);
+  transform: translateX(-50%) scale(1.2) rotate(360deg);
 }
 
 .timeline-logo-node img {
@@ -397,41 +397,67 @@ body.developer-mode .timeline-logo-node {
   border-radius: 50%;
 }
 
-.timeline-dot {
-  display: none;
-  position: absolute;
-  top: 0.4rem;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--primary);
-  border: 3px solid var(--bg);
-  z-index: 6;
+/* Larger company logos on big screens; base 56px is kept on small screens */
+@media (min-width: 1024px) {
+  .timeline-logo-node {
+    width: 88px;
+    height: 88px;
+    border-width: 5px;
+  }
 }
 
-body.developer-mode .timeline-dot {
-  background: var(--text);
-  border-color: var(--bg);
+/* Split card: squished info on the left, wide role details on the right */
+.job {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.5fr) minmax(0, 1.5fr);
+  gap: 3rem;
+  align-items: start;
 }
 
-.timeline-item.left .timeline-logo-node { right: -25px; }
-.timeline-item.right .timeline-logo-node { left: -25px; }
-.timeline-item.left .timeline-dot { right: -8px; }
-.timeline-item.right .timeline-dot { left: -8px; }
+.job-info {
+  text-align: right;
+  padding-right: 1.5rem;
+}
+
+.job-positions {
+  text-align: left;
+  padding-left: 1.5rem;
+}
 
 .job-company {
   margin: 0 0 1rem;
   color: var(--text);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .position-item {
+  position: relative;
   margin-bottom: 2rem;
 }
 
 .position-item:last-child {
   margin-bottom: 0;
+}
+
+/* Each position for a multi-role company gets a dot that sits on the main
+   center rail. The right column's content starts at center (50%) + half the
+   3rem grid gap + the column's 1.5rem padding = 3rem, so -3rem lands on the rail. */
+.position-dot {
+  position: absolute;
+  left: calc(-3rem - 10px);
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 4px solid var(--bg);
+  z-index: 4;
+}
+
+body.developer-mode .position-dot {
+  background: var(--text);
+  border-color: var(--bg);
 }
 
 .job-period {
@@ -444,7 +470,7 @@ body.developer-mode .timeline-dot {
 
 .job-role {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--primary);
 }
 
@@ -456,9 +482,10 @@ body.developer-mode .timeline-dot {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0 0 0.85rem;
+  margin: 0;
   padding: 0;
   list-style: none;
+  justify-content: flex-end;
 }
 
 .job-tool {
@@ -475,10 +502,6 @@ body.developer-mode .job-tool {
   border: none;
 }
 
-.timeline-item.left .job-tools {
-  justify-content: flex-end;
-}
-
 .job-points {
   margin: 0;
   padding: 0;
@@ -487,7 +510,47 @@ body.developer-mode .job-tool {
 }
 
 .job-points li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Stack into a single column on narrow screens */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 28px;
+  }
+
+  .timeline-item {
+    padding-left: 72px;
+  }
+
+  .timeline-logo-node {
+    left: 28px;
+  }
+
+  .timeline-logo-node:hover {
+    transform: translateX(-50%) scale(1.15) rotate(360deg);
+  }
+
+  .job {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .job-info,
+  .job-positions {
+    text-align: left;
+    padding: 0;
+  }
+
+  .job-tools {
+    justify-content: flex-start;
+  }
+
+  /* Keep dots on the mobile rail (28px) now that column padding is gone */
+  .position-dot {
+    left: -51px;
+  }
 }
 
 /* ---------- Education ---------- */
@@ -806,6 +869,15 @@ body.developer-mode .skill-tag:hover {
   }
 }
 
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .beyond-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 620px) {
   .brand {
     font-size: 1.2rem;
@@ -817,27 +889,6 @@ body.developer-mode .skill-tag:hover {
   .nav a {
     font-size: 0.8rem;
   }
-}
-
-@media (max-width: 640px) {
-  .timeline::before { left: 7px; }
-  .timeline-item, .timeline-item.left, .timeline-item.right {
-    width: 100%;
-    left: 0;
-    text-align: left;
-    padding: 0 0 2.5rem 2rem;
-  }
-  .timeline-logo-node { display: none; }
-  .timeline-dot {
-    display: block;
-    left: 0;
-  }
-  .timeline-item.left .job-header,
-  .timeline-item.left .job-tools {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .timeline-item.left .job-header > div { text-align: left; }
 }
 
 @media (max-width: 768px) {

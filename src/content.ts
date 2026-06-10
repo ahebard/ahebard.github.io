@@ -115,7 +115,7 @@ export const career: CareerEntry[] = [
     ],
   },
   {
-    company: "First Job Inc.",
+    company: "Radial Analytics",
     logo: "icons/radial_v3.png",
     tools: [
       "Python",

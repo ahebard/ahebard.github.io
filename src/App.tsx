@@ -209,40 +209,43 @@ function Career() {
     <Section id="career" title="Career">
       <div className="timeline">
         {career.map((entry: CareerEntry, i: number) => (
-          <div
-            key={i}
-            className={`timeline-item ${i % 2 === 0 ? "left" : "right"}`}
-          >
+          <div key={i} className="timeline-item">
             <div className="timeline-logo-node">
               <img src={entry.logo} alt={`${entry.company} logo`} />
             </div>
-            <div className="timeline-dot" />
             <div className="job">
-              <div className="job-company-header">
+              <div className="job-info">
                 <h3 className="job-company">{entry.company}</h3>
+                <ul className="job-tools">
+                  {entry.tools.map((tool: string, k: number) => (
+                    <li key={k} className="job-tool">
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="job-tools">
-                {entry.tools.map((tool: string, k: number) => (
-                  <li key={k} className="job-tool">
-                    {tool}
-                  </li>
-                ))}
-              </ul>
-              {entry.positions.map((pos: Position, j: number) => (
-                <div key={j} className="position-item">
-                  <div className="job-header">
-                    <div>
+              <div
+                className={`job-positions ${
+                  entry.positions.length > 1 ? "has-multiple" : ""
+                }`}
+              >
+                {entry.positions.map((pos: Position, j: number) => (
+                  <div key={j} className="position-item">
+                    {entry.positions.length > 1 && (
+                      <span className="position-dot" aria-hidden="true" />
+                    )}
+                    <div className="job-header">
                       <h4 className="job-role">{pos.role}</h4>
                       <span className="job-period">{pos.period}</span>
                     </div>
+                    <ul className="job-points">
+                      {pos.points.map((point: string, k: number) => (
+                        <li key={k}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="job-points">
-                    {pos.points.map((point: string, k: number) => (
-                      <li key={k}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         ))}
