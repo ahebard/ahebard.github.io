@@ -21,7 +21,7 @@ export const profile: Profile = {
   // Path to your resume file. Drop your real file into the /public folder
   // (e.g. public/resume.pdf) and update this path. Currently wired to a
   // placeholder so the download button already works.
-  resumeUrl: "resume.pdf",
+  resumeUrl: "ashley_hebard_resume.pdf",
   email: "ash.hebard@gmail.com",
   github: "https://github.com/ahebard/",
   linkedin: "https://linkedin.com/in/ashley-hebard/",
