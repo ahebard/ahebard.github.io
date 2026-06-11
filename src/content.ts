@@ -39,7 +39,6 @@ export const career: CareerEntry[] = [
       "Kotlin",
       "Swift",
       "PostgreSQL",
-      "AWS",
       "Twilio",
       "Stripe",
       "Datadog",
