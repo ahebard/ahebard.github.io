@@ -15,7 +15,7 @@
   --hero-gradient: linear-gradient(135deg, #1b2a6b 0%, #3a2a8c 40%, #7c2a8c 70%, #0b0f1a 100%);
   
   --font-main: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-brand: "Comic Sans MS", "Comic Sans", cursive;
+  --font-brand: "Comic Sans MS", "Comic Sans",  "Comic Neue", "Chalkboard SE", "Marker Felt", sans-serif;
   
   --radius: 10px;
   --content-width: 1250px;
